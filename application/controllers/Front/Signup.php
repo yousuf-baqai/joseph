@@ -37,11 +37,11 @@ class Signup extends Front_controller
                 'member_id' => $id,
             );
             $this->session->set_userdata($session_data);
-            redirect('');
+            redirect('dashboard');
         }else {
             $errors = validation_errors('<div class="error">', '</div>');
             $this->session->set_flashdata('error', $errors);
-            redirect('');
+            redirect('login');
         }
     }
     }
